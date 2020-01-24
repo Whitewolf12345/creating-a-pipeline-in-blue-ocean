@@ -9,6 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        sh 'chown -R jenkins:jenkins .'
         sh 'npm install -g express'
       }
     }
